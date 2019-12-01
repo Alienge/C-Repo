@@ -1,0 +1,125 @@
+﻿<Window x:Class="WpfApp1.PosiWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="PosiWindow" Height="450" Width="800">
+    <Grid>
+        <!--
+        <StackPanel Margin="10">
+            <TextBox />
+        </StackPanel>
+        -->
+        <TextBlock TextAlignment="Center" Width="400" FontSize="19" Margin="-10,179,403.333,-139.333">
+            <Run Text="姓名" /><LineBreak />
+        </TextBlock>
+        
+        <TextBlock TextAlignment="Center" Width="400" FontSize="19" Margin="-10,119,403.333,-79.333">
+            <Run Text="ID" /><LineBreak />
+        </TextBlock>
+        
+        <TextBlock TextAlignment="Center" Width="400" FontSize="19" Margin="-10,244,403.333,-204.333">
+            <Run Text="职位" /><LineBreak />
+        </TextBlock>
+
+        <TextBlock TextAlignment="Center" Width="400" FontSize="19" Margin="-20,299,413.333,-259.333"><Run Text="    "/><Run Text="薪水"/><LineBreak/></TextBlock>
+        
+        
+        <TextBlock TextAlignment="Center" Width="400" FontSize="23" Margin="190,40,203.333,-0.333">
+            <Run Text="修改员工工资信息" /><LineBreak />
+        </TextBlock>
+        <TextBox FontSize="17" Height="26" Margin="229,179,189.333,0" Name="txt_Name1" VerticalAlignment="Top" Foreground="Indigo" TabIndex="0" BorderThickness="1">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.3" Stretch="None" AlignmentX="Left">
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Italic" Text="请输入姓名"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <TextBox FontSize="17" Height="26" Margin="229,244,187.333,0" Name="txt_position" VerticalAlignment="Top" Foreground="Indigo" TabIndex="0" BorderThickness="1">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.3" Stretch="None" AlignmentX="Left">
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Italic" Text="请输入职位"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <TextBox FontSize="17" Height="26" Margin="227,119,188.333,0" Name="txt_id" VerticalAlignment="Top" Foreground="Indigo" TabIndex="0" BorderThickness="1">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.3" Stretch="None" AlignmentX="Left">
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Italic" Text="请输入ID"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        <TextBox FontSize="17" Height="26" Margin="231,299,186.333,0" Name="txt_salary" VerticalAlignment="Top" Foreground="Indigo" TabIndex="0" BorderThickness="1">
+            <TextBox.Resources>
+                <VisualBrush x:Key="HelpBrush" TileMode="None" Opacity="0.3" Stretch="None" AlignmentX="Left">
+                    <VisualBrush.Visual>
+                        <TextBlock FontStyle="Italic" Text="请输入薪水"/>
+                    </VisualBrush.Visual>
+                </VisualBrush>
+            </TextBox.Resources>
+            <TextBox.Style>
+                <Style TargetType="TextBox">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="{x:Null}">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="Background" Value="{StaticResource HelpBrush}"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+
+        
+
+        <Button Content="提交" Name="button3" Click="button3_Click" Margin="360,365,358.333,20.667" />
+    </Grid>
+</Window>

@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:core="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="1200">
+    <!--
+     <Window.Resources>
+        <ObjectDataProvider x:Key="SexEnumKey" MethodName="GetValues" ObjectType="{x:Type core:Enum}">
+            <ObjectDataProvider.MethodParameters>
+                <x:Type Type="local:SexEnum"/>
+            </ObjectDataProvider.MethodParameters>
+        </ObjectDataProvider>
+       </Window.Resources>
+    -->
+    <Grid Height="421" Margin="0,0,0.333,-0.333" VerticalAlignment="Bottom">
+        <DataGrid x:Name="dataGrid" ItemsSource="{Binding}" CanUserAddRows="False" AutoGenerateColumns="False" SelectionChanged="DataGrid_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="80"  Binding="{Binding id}">
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Name" Width="80" Binding="{Binding nm}"/>
+                <DataGridTextColumn Header="Gender" Width="80" Binding="{Binding gender}"/>
+                <DataGridTextColumn Header="Specialty" Width="160" Binding="{Binding specialty}"/>
+                <DataGridTemplateColumn Header="Brith" Width="120">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=brith, StringFormat=\{0:d\}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Mail" Width="160" Binding="{Binding mail}"/>
+                <DataGridTextColumn Header="Phone" Width="160" Binding="{Binding phone}"/>
+                <DataGridTemplateColumn Header="State" Width="120*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Button Content="编辑薪资" Name="Edit" Width="60" Tag="{Binding Edit}" Click="Edit_Click" />
+                                <TextBox Name="txtQuestion" Width="20" xml:space="preserve" >
+                                </TextBox>
+                                
+                                <Button Content="查询薪资" Name="select" Width="60" Tag="{Binding salary}" Click="Select_Click" />
+                                
+                                    
+                                <TextBox Name="txtQuestion1" Width="20" xml:space="preserve" >
+                                </TextBox>
+                                <Button Content="删除信息" Width="60" Name="Delete"  Tag="{Binding Delete}" Click="Delete_Click"  />
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+   
+</Window>

@@ -1,0 +1,8 @@
+{
+
+  "Version": "0.0.1", //版本号
+  "UpdateContent": "更新最新版", //更新信息
+  "DownloadUri": "https://github.com/Alienge/DownloadTest/blob/master/update.json", //更新包的下载地址
+  "Time": "2019/12/3", //更新时间
+  "Size": "300k" //更新包大小
+}

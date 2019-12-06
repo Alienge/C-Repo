@@ -52,7 +52,7 @@ namespace WpfApp1
             PosiWindow posiWindow = new PosiWindow(userinfo,ref conn);
             posiWindow.Show();
             posiWindow.ShowActivated = true;
-            this.Close();
+            //this.Close();
             //string result = mySelectedElement.Row[0].ToString();
             //MessageBox.Show(userinfo.id.ToString());
 
@@ -115,10 +115,11 @@ namespace WpfApp1
                 mySelectedElement.Row[4].ToString(),
                 mySelectedElement.Row[5].ToString(),
                 mySelectedElement.Row[6].ToString());
+
             PosiWindow posiWindow = new PosiWindow(userinfo, ref conn,1);
             posiWindow.Show();
             posiWindow.ShowActivated = true;
-            this.Close();
+            //this.Close();
 
             /*
             string commandStr = "select * from UserInfo";

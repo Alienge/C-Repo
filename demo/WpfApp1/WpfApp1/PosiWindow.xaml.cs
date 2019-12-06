@@ -32,10 +32,12 @@ namespace WpfApp1
             txt_id.Text = userinfo.id.ToString();
             
 
+
         }
         public PosiWindow(UserInform userinfo, ref SqlConnection conn, int flag)
         {
             InitializeComponent();
+            button3.Visibility = Visibility.Collapsed;
             this.conn = conn;
             this.userinfo = userinfo;
             txt_Name1.Text = userinfo.name;
@@ -51,9 +53,10 @@ namespace WpfApp1
                 //只有唯一标识
                 while (reader.Read())
                 {
-                    position = reader["position"].ToString();
+                    position = Convert.ToString(reader["position"]);
                     salary = Convert.ToDecimal(reader["Salary"]);
                 }
+                reader.Close();
                 UserPosi userPosi = new UserPosi(userinfo.id, userinfo.name, position, salary);
                 txt_position.Text = position;
                 txt_salary.Text = salary.ToString();
@@ -63,6 +66,8 @@ namespace WpfApp1
             {
                 MessageBox.Show("查询失败");
             }
+
+            
            
         }
         // 提交职位表，更新职位表即可

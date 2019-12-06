@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{CDFC1A62-01FC-4746-9227-72CEA52BCBBC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3BF72CBE-06F4-4080-B8A9-3ACCFCB01FE8} = {3BF72CBE-06F4-4080-B8A9-3ACCFCB01FE8}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "updatePro1", "updatePro1\updatePro1.csproj", "{3BF72CBE-06F4-4080-B8A9-3ACCFCB01FE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{CDFC1A62-01FC-4746-9227-72CEA52BCBBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDFC1A62-01FC-4746-9227-72CEA52BCBBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDFC1A62-01FC-4746-9227-72CEA52BCBBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BF72CBE-06F4-4080-B8A9-3ACCFCB01FE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF72CBE-06F4-4080-B8A9-3ACCFCB01FE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF72CBE-06F4-4080-B8A9-3ACCFCB01FE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF72CBE-06F4-4080-B8A9-3ACCFCB01FE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

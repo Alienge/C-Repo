@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="HomeWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="新增员工" Name="button4" Click="button4_Click" Margin="210,180,478.333,195.667" />
-        <Button Content="员工薪资查询" Name="button5" Click="button5_Click" Margin="465,180,228.333,195.667" />
+        <Button Content="新增员工" Name="button4" Click="button4_Click" Margin="200,180,488.333,195.667" />
+        <Button Content="员工薪资查询" Name="button5" Click="button5_Click" Margin="480,180,213.333,195.667" />
+        
     </Grid>
 </Window>

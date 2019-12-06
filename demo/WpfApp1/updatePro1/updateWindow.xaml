@@ -1,0 +1,14 @@
+﻿<Window x:Class="updatePro1.updateWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:updatePro1"
+             mc:Ignorable="d" 
+             Title="updatewindow" Height="450" Width="800">
+    <Grid Margin="0,0,0.333,-0.333">
+        <Button Content="启动更新程序" Name="button6" Click="button6_Click" Margin="327,85,368,301" RenderTransformOrigin="0.214,0.407" />
+        <TextBlock x:Name="download_name" TextAlignment="Center" FontSize="19" Margin="175,215,248,171"><Run Text="........."/><LineBreak/></TextBlock>
+        <Button Content="重新启动" Name="button7" Click="button7_Click" Margin="327,300,368,81" RenderTransformOrigin="0.214,0.407" />
+    </Grid>
+</Window>

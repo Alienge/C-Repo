@@ -8,6 +8,8 @@
         Title="MainWindow" Height="450" Width="800">
     
     <Grid>
-        <Button Content="连接数据库" Height="62" Name="button1" Width="110" Click="button1_Click" />
+        <Button Content="连接数据库" Height="62" Name="button1" Width="110" Click="button1_Click" Margin="130,173,553.333,185.667" />
+        <Button Content="版本更新" Name="button6" Click="button6_Click" Margin="505,173,218.333,222.667" RenderTransformOrigin="0.214,0.407" />
+       
     </Grid>
 </Window>

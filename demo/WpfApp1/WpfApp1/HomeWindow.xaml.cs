@@ -13,21 +13,30 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Data.SqlClient;
 using System.Data;
-
+using System.Net;
+using System.Diagnostics;
+//using System.IO.Compression.FileSystem;
+using System.IO.Compression;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace WpfApp1
 {
+   
     /// <summary>
     /// HomeWindow.xaml 的交互逻辑
     /// </summary>
     public partial class HomeWindow : Window
     {
+        
         public 
             SqlConnection  conn;
+        
         public HomeWindow(ref SqlConnection conn1)
         {
             InitializeComponent();
             this.conn = conn1;
+           
         }
 
         private void button4_Click(object sender, RoutedEventArgs e)
@@ -94,5 +103,8 @@ namespace WpfApp1
             //this.Close();
             
         }
+
+        
+
     }
 }
